@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav/Nav'
 import Logo from './components/Logo/Logo'
-import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import Rank from './components/Rank/Rank'
+import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
+import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import './App.css';
 import 'tachyons';
 import Particles from 'react-particles-js';
@@ -66,6 +67,7 @@ class App extends Component {
           onInputChange={this.onInputChange}
           onButtonSubmit={this.onButtonSubmit}
         />
+        <FaceRecognition />
       </div>
     );
   }
