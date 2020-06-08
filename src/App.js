@@ -4,6 +4,7 @@ import Logo from './components/Logo/Logo'
 import Rank from './components/Rank/Rank'
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
+import SignIn from './components/SignIn/SignIn';
 import './App.css';
 import 'tachyons';
 import Particles from 'react-particles-js';
@@ -72,6 +73,7 @@ class App extends Component {
           params={particlesOptions}
         />
         <Nav />
+        <SignIn />
         <Logo />
         <Rank />
         <ImageLinkForm
