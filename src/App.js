@@ -67,16 +67,20 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  onRouteChange = route => {
+    this.setState({ route: route });
+  }
+
   render() {
     return (
       <div className="App">
         <Particles className='particles'
           params={particlesOptions}
         />
-        <Nav />
         { this.state.route === 'signin' 
-          ? <SignIn />
+          ? <SignIn onRouteChange={this.onRouteChange} />
           : <div>
+              <Nav onRouteChange={this.onRouteChange} />
               <Logo />
               <Rank />
               <ImageLinkForm
