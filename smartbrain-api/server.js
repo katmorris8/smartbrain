@@ -38,9 +38,9 @@ app.post('/signin', (req, res) => {
   //   // res == true
   // });
 
-  if (req.body.email === database.users[0].email && 
+  if (req.body.email === database.users[0].email &&
     req.body.password === database.users[0].password) {
-    res.json(database.users[0]);
+    res.json(database.users[0])
   } else {
     res.status(400).json('error logging in');
   }
@@ -49,10 +49,10 @@ app.post('/signin', (req, res) => {
 app.post('/register', (req, res) => {
   const { email, name, password } = req.body;
 
-  bcrypt.hash(password, null, null, function(err, hash) {
+  bcrypt.hash(password, null, null, function (err, hash) {
     console.log(hash);
   });
-  
+
   database.users.push({
     id: '125',
     name: name,
