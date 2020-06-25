@@ -4,11 +4,30 @@ class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      signInEmail: '',
-      signInPassword: ''
+      email: '',
+      password: '',
+      name: ''
     }
   }
-  
+
+  onNameChange = (e) => {
+    this.setState({
+      name: e.target.value
+    })
+  }
+
+  onEmailChange = (e) => {
+    this.setState({
+      email: e.target.value
+    })
+  }
+
+  onPasswordChange = (e) => {
+    this.setState({
+      password: e.target.value
+    })
+  }
+
   render() {
     const { onRouteChange } = this.props;
     return (
