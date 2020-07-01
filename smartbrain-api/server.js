@@ -69,14 +69,6 @@ app.post('/register', (req, res) => {
     name: name,
     joined: new Date()
   }).then(console.log)
-
-  // database.users.push({
-  //   id: '125',
-  //   name: name,
-  //   email: email,
-  //   entries: 0,
-  //   joined: new Date()
-  // })
   res.json(database.users[database.users.length - 1]);
 })
 
