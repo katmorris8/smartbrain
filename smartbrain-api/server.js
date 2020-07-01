@@ -79,13 +79,6 @@ app.post('/register', (req, res) => {
 
 app.get('/profile/:id', (req, res) => {
   const { id } = req.params;
-  // let found = false;
-  // database.users.forEach(user => {
-  //   if (user.id === id) {
-  //     found = true;
-  //     return res.json(user);
-  //   }
-  // })
   db.select('*').from('users').where({ id })
     .then(user => {
       if (user.length) {
@@ -95,10 +88,6 @@ app.get('/profile/:id', (req, res) => {
       }
     })
     .catch(user => res.status(400).json('Error getting user'))
-
-  // if (!found) {
-  //   res.status(404).json('no such user');
-  // }
 })
 
 app.put('/image', (req, res) => {
