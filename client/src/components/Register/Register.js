@@ -31,7 +31,7 @@ class Register extends Component {
   onSubmitRegister = () => {
     fetch('http://localhost:3000/register', {
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password,
@@ -56,41 +56,41 @@ class Register extends Component {
               <legend className="f1 fw6 ph0 mh0">Register</legend>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
-                <input 
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white" 
-                  type="name" 
-                  name="name" 
-                  id="name" 
+                <input
+                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                  type="name"
+                  name="name"
+                  id="name"
                   onChange={this.onNameChange}
                 />
               </div>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                <input 
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white" 
-                  type="email" 
-                  name="email-address" 
-                  id="email-address" 
+                <input
+                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                  type="email"
+                  name="email-address"
+                  id="email-address"
                   onChange={this.onEmailChange}
                 />
               </div>
               <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                <input 
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white" 
-                  type="password" 
-                  name="password" 
-                  id="password" 
+                <input
+                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white"
+                  type="password"
+                  name="password"
+                  id="password"
                   onChange={this.onPasswordChange}
                 />
               </div>
             </fieldset>
             <div className="">
-              <input 
+              <input
                 onClick={this.onSubmitRegister}
-                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
-                type="submit" 
-                value="Sign In" 
+                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                type="submit"
+                value="Sign In"
               />
             </div>
           </div>
